@@ -1,8 +1,22 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { Gift, Heart } from 'lucide-react';
+import { Gift, Heart, Copy, Check } from 'lucide-react';
 
 const ListaDePresentes = () => {
+  const [copied, setCopied] = useState(false);
+  const pixKey = "(67) 99255-3806";
+
+  const handleCopyPix = async () => {
+    try {
+      await navigator.clipboard.writeText(pixKey);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Falha ao copiar:', err);
+    }
+  };
+
   return (
     <section id="presentes" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -18,7 +32,20 @@ const ListaDePresentes = () => {
             <p className="text-gray-600 mb-6">Contribua com qualquer valor para nossa viagem dos sonhos. Agradecemos imensamente seu carinho!</p>
             <div className="flex flex-col items-center">
               <Image src="/qrcode-pix.png" alt="QR Code PIX" width={220} height={220} className="rounded-md" />
-              <p className="mt-4 text-sm text-gray-500">Chave PIX: (11) 99999-9999</p>
+              <div className="mt-4 flex items-center gap-2 bg-gray-100 rounded-lg px-4 py-2">
+                <p className="text-sm text-gray-700 font-mono">{pixKey}</p>
+                <button
+                  onClick={handleCopyPix}
+                  className="text-gray-500 hover:text-gray-700 transition-colors p-1"
+                  title="Copiar chave PIX"
+                >
+                  {copied ? (
+                    <Check className="w-4 h-4 text-green-500" />
+                  ) : (
+                    <Copy className="w-4 h-4" />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
 

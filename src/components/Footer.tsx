@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Code, Calendar, MapPin, Phone, Mail } from 'lucide-react';
+import { Heart, Code, Calendar, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -97,7 +97,7 @@ const Footer = () => {
         {/* Mensagem Final */}
         <div className="text-center mt-6 pt-6 border-t border-gray-700">
           <p className="text-gray-300 text-sm sm:text-base italic">
-            "O amor não é apenas olhar um para o outro, é olhar juntos na mesma direção."
+            &quot;O amor não é apenas olhar um para o outro, é olhar juntos na mesma direção.&quot;
           </p>
           <p className="text-gray-400 text-xs mt-2">— Antoine de Saint-Exupéry</p>
         </div>

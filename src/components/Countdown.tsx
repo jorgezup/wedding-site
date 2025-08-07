@@ -8,33 +8,32 @@ interface TimeLeft {
   segundos: number;
 }
 
+const weddingDate = new Date('2026-02-14T00:00:00-03:00');
+
 const Countdown = () => {
-  const weddingDate = new Date('2026-02-14T00:00:00-03:00');
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
   const [hasMounted, setHasMounted] = useState(false);
 
-  const calculateTimeLeft = (): TimeLeft | null => {
-    const difference = +weddingDate - +new Date();
-
-    if (difference > 0) {
-      return {
-        dias: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        horas: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutos: Math.floor((difference / 1000 / 60) % 60),
-        segundos: Math.floor((difference / 1000) % 60),
-      };
-    }
-
-    return null;
-  };
-
   useEffect(() => {
     setHasMounted(true);
-    setTimeLeft(calculateTimeLeft());
+    
+    const updateTime = () => {
+      const difference = +weddingDate - +new Date();
 
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+      if (difference > 0) {
+        setTimeLeft({
+          dias: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          horas: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutos: Math.floor((difference / 1000 / 60) % 60),
+          segundos: Math.floor((difference / 1000) % 60),
+        });
+      } else {
+        setTimeLeft(null);
+      }
+    };
+
+    updateTime(); // Initial call
+    const timer = setInterval(updateTime, 1000);
 
     return () => clearInterval(timer);
   }, []);

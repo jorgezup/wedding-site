@@ -9,7 +9,7 @@ export interface ConfirmationData {
 
 export interface ApiResponse {
   message: string;
-  data?: any;
+  data?: unknown;
 }
 
 export interface MenuItem {

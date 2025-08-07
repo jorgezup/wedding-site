@@ -30,16 +30,16 @@ const Home = () => {
             src={image}
             alt={`Wedding photo ${index + 1}`}
             fill
-            className="object-cover sm:object-center object-top"
+            className="object-contain sm:object-contain sm:rounded-xl"
             priority={index === 0}
             sizes="100vw"
-            style={{ objectPosition: 'center 30%' }}
+            style={{ objectPosition: 'center 60%' }}
           />
         </div>
       ))}
       
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-30" />
+      {/* <div className="absolute inset-0 bg-black bg-opacity-30" /> */}
       
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center text-white px-4">

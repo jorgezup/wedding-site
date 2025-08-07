@@ -16,8 +16,27 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Eiva & Jorge",
-  description: "Nosso site de casamento",
+  title: "Eiva & Jorge - Casamento",
+  description: "Celebre conosco nosso casamento em 14 de Fevereiro de 2026. Encontre todas as informações sobre a cerimônia, festa e lista de presentes.",
+  keywords: ["casamento", "Eiva", "Jorge", "14 de fevereiro", "2026", "cerimônia", "festa"],
+  authors: [{ name: "Eiva & Jorge" }],
+  openGraph: {
+    title: "Eiva & Jorge - Casamento",
+    description: "Celebre conosco nosso casamento em 14 de Fevereiro de 2026. Encontre todas as informações sobre a cerimônia, festa e lista de presentes.",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Casamento Eiva & Jorge",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eiva & Jorge - Casamento",
+    description: "Celebre conosco nosso casamento em 14 de Fevereiro de 2026",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export default function RootLayout({

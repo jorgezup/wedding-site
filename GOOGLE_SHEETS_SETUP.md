@@ -11,13 +11,12 @@ Este guia explica como configurar o Google Sheets para receber as confirmações
 
 ```
 A1: Nome
-B1: Convidado de
-C1: Adultos
-D1: Crianças
-E1: Pequeninos
-F1: Telefone
-G1: Presença Confirmada
-H1: Data/Hora (opcional)
+B1: Adultos
+C1: Crianças
+D1: Pequeninos
+E1: Telefone
+F1: Presença Confirmada
+G1: Data/Hora (opcional)
 ```
 
 ## 🔑 Passo 2: Configurar Google Cloud Project
@@ -111,10 +110,10 @@ GOOGLE_SHEET_ID=1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
 
 Os dados são salvos na planilha no seguinte formato:
 
-| Nome | Convidado de | Adultos | Crianças | Pequeninos | Telefone | Presença Confirmada |
+| Nome  | Adultos | Crianças | Pequeninos | Telefone | Presença Confirmada | Data/Hora
 |------|--------------|---------|-----------|-------------|-----------|-------------------|
-| João Silva | Jorge (Noivo) | 2 | 0 | 1 | (11) 99999-9999 | true |
-| Maria Santos | Eiva (Noiva) | 1 | 1 | 0 | (21) 88888-8888 | false |
+| João Silva | 2 | 0 | 1 | (11) 99999-9999 | true | 2025-07-01 15:26 |
+| Maria Santos | 1 | 1 | 0 | (21) 88888-8888 | false | 2025-07-01 15:26 |
 
 ## 🛠️ Troubleshooting
 

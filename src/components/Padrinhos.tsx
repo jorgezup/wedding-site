@@ -33,11 +33,14 @@ const Padrinhos = () => {
     if (!isAutoPlaying) return;
     
     const interval = setInterval(() => {
-      goToNext();
+      setCurrentIndex((prevIndex) => {
+        const isLastSlide = prevIndex === padrinhos.length - 1;
+        return isLastSlide ? 0 : prevIndex + 1;
+      });
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentIndex, isAutoPlaying]);
+  }, [isAutoPlaying]);
 
   return (
     <section id="padrinhos" className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-emerald-50 to-teal-50">

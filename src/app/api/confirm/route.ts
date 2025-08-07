@@ -19,12 +19,14 @@ export async function POST(request: NextRequest) {
     const spreadsheetId = process.env.GOOGLE_SHEET_ID;
     const range = 'A1:G1';
 
+    const now = new Date(Date.now() - 3 * 60 * 60 * 1000); // UTC-3
+    const formattedDate = now.toISOString().replace('T', ' ').substring(0, 19); // "YYYY-MM-DD HH:MM:SS"
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId,
       range,
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[name, adults, children, toddlers, phone, attending]],
+      values: [[name, adults, children, toddlers, phone, attending, formattedDate]],
       },
     });
 

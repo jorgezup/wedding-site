@@ -12,7 +12,7 @@ const Festa = () => {
             Festa
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Depois do "Sim", vamos celebrar juntos com muita alegria, música e dança!
+            Depois do &quot;Sim&quot;, vamos celebrar juntos com muita alegria, música e dança!
           </p>
         </div>
 
