@@ -6,48 +6,48 @@ const hoteis = [
   {
     name: 'Ipê Palace Hotel',
     address: 'Alameda Navarro de Andrade, 276 - Centro, Adamantina',
-    mapLink: 'https://www.google.com/maps/place/Ip%C3%AA+Palace+Hotel/@-21.6887914,-51.0712093,17z',
-    phone: 'Ver site: ipepalacehotel.com.br',
+    mapLink: 'https://maps.app.goo.gl/YSCHRiKSzaWDBbU37',
+    phone: '(018)3522-5037',
     rating: 4.8,
     features: ['Piscina', 'Spa', 'Café da manhã', 'Wi-Fi']
   },
   {
     name: 'Hotel Solarium Park',
     address: 'R. Josefina Dall\'Antonia Tiveron, 390 - Centro, Adamantina',
-    mapLink: 'https://www.google.com/maps/place/HOTEL+SOLARIUM+PARK/@-21.6869643,-51.0700376,17z',
-    phone: 'Contato via reservas',
+    mapLink: 'https://maps.app.goo.gl/Z2NbNikTdGf9T8Xm8',
+    phone: '(018)3521-1561',
     rating: 4.3,
     features: ['Jardim', 'Café da manhã', 'Estacionamento']
   },
   {
     name: 'Abaporu Hotéis',
     address: 'Est. de servidão Jose M. Almeida Silva, Adamantina',
-    mapLink: 'https://www.google.com/maps/place/Abaporu+Hot%C3%A9is/@-21.6973805,-51.0619808,17z',
-    phone: 'Ver site: hotelabaporu.com.br',
+    mapLink: 'https://maps.app.goo.gl/VUSuuuhGaLgm4RfG8',
+    phone: '(018)3522-8400',
     rating: 4.6,
     features: ['2 piscinas', 'Lago de pesca', 'Churrasqueira', 'Wi-Fi']
   },
   {
     name: 'Hotel Restaurante Angatu',
     address: 'R. João Segateli, 25 - Centro, Osvaldo Cruz',
-    mapLink: 'https://www.google.com/maps/place/Hotel+Restaurante+Angatu/@-21.7988866,-50.8701841,17z',
-    phone: 'Contato via reservas',
+    mapLink: 'https://maps.app.goo.gl/Ucc9u8peymUpW2oj9',
+    phone: '(018)3528-2171',
     rating: 3.9,
     features: ['Restaurante', 'Piscina', 'Café da manhã', 'Wi-Fi']
   },
   {
     name: 'Hotel Parati',
     address: 'Osvaldo Cruz - SP',
-    mapLink: 'https://www.google.com/maps/place/Hotel+Parati/@-21.7893418,-50.792593,17z',
-    phone: 'Contato via reservas',
+    mapLink: 'https://maps.app.goo.gl/mK3g4qzjy9qP1yZcA',
+    phone: '(018)3582-1920',
     rating: 4.0,
     features: ['Localização central', 'Estacionamento']
   },
   {
     name: 'Hotel Monte Rei Lucélia',
     address: 'Av. José Silveira Mendonça, 228 - Jardim Bela Vista, Lucélia',
-    mapLink: 'https://www.google.com/maps/place/Hotel+Monte+Rei+Luc%C3%A9lia/@-21.7150746,-51.0152098,17z',
-    phone: 'Contato via reservas',
+    mapLink: 'https://maps.app.goo.gl/CQeSSmMpKn8mzNWn8',
+    phone: '(018)98157-7423',
     rating: 4.8,
     features: ['Acomodações premium', 'Café da manhã excelente', 'Quartos limpos']
   }

@@ -30,7 +30,7 @@ const Home = () => {
             src={image}
             alt={`Wedding photo ${index + 1}`}
             fill
-            className="object-contain sm:object-contain sm:rounded-xl"
+            className="object-cover sm:object-cover sm:rounded-xl"
             priority={index === 0}
             sizes="100vw"
             style={{ objectPosition: 'center 60%' }}
