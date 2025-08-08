@@ -16,3 +16,9 @@ export interface MenuItem {
   href: string;
   label: string;
 }
+
+export interface Song {
+  id: string;
+  title: string;
+  artist: string;
+}

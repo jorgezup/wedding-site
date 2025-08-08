@@ -8,6 +8,7 @@ import ListaDePresentes from "@/components/ListaDePresentes";
 import Dicas from "@/components/Dicas";
 import Footer from "@/components/Footer";
 import ConfirmacaoPresenca from "@/components/ConfirmacaoPresenca";
+import MusicPlayer from "@/components/MusicPlayer";
 
 export default function Page() {
   return (
@@ -24,6 +25,7 @@ export default function Page() {
         <ConfirmacaoPresenca />
       </main>
       <Footer />
+      <MusicPlayer />
     </>
   );
 }
