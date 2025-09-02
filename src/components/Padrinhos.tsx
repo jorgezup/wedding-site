@@ -66,27 +66,28 @@ const Padrinhos = () => {
             <div className="relative aspect-[4/3] sm:aspect-[3/2] lg:aspect-[16/10]">
               <Image
                 src={padrinhos[currentIndex].photo}
-                alt={padrinhos[currentIndex].name}
+                alt={`Foto dos ${padrinhos[currentIndex].name} - ${padrinhos[currentIndex].role} do casamento de Eiva e Jorge`}
                 fill
                 className="object-cover transition-opacity duration-500"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-                priority
+                priority={currentIndex === 0}
+                quality={85}
               />
               <div className="absolute inset-0 bg-black bg-opacity-20" />
               
               {/* Navigation Buttons */}
               <button 
                 onClick={goToPrevious}
-                className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 sm:p-3 shadow-lg transition-all duration-200 opacity-80 hover:opacity-100"
-                aria-label="Foto anterior"
+                className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 sm:p-4 shadow-lg transition-all duration-200 opacity-80 hover:opacity-100 min-w-[44px] min-h-[44px] focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                aria-label={`Foto anterior - ${padrinhos[currentIndex === 0 ? padrinhos.length - 1 : currentIndex - 1].name}`}
               >
                 <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
               </button>
               
               <button 
                 onClick={goToNext}
-                className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 sm:p-3 shadow-lg transition-all duration-200 opacity-80 hover:opacity-100"
-                aria-label="Próxima foto"
+                className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 sm:p-4 shadow-lg transition-all duration-200 opacity-80 hover:opacity-100 min-w-[44px] min-h-[44px] focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                aria-label={`Próxima foto - ${padrinhos[currentIndex === padrinhos.length - 1 ? 0 : currentIndex + 1].name}`}
               >
                 <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
               </button>
@@ -105,17 +106,18 @@ const Padrinhos = () => {
           </div>
           
           {/* Dots Navigation */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {padrinhos.map((_, index) => (
+          <div className="flex justify-center mt-6 space-x-2" role="group" aria-label="Navegação de fotos">
+            {padrinhos.map((padrinho, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                className={`rounded-full transition-all duration-300 min-w-[44px] min-h-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 ${
                   currentIndex === index 
-                    ? 'bg-accent w-8 sm:w-12' 
-                    : 'bg-gray-300 hover:bg-gray-400'
+                    ? 'bg-accent w-8 sm:w-12 h-2 sm:h-3' 
+                    : 'bg-gray-300 hover:bg-gray-400 w-2 h-2 sm:w-3 sm:h-3'
                 }`}
-                aria-label={`Ver foto ${index + 1}`}
+                aria-label={`Ver foto de ${padrinho.name} (${index + 1} de ${padrinhos.length})`}
+                aria-current={currentIndex === index ? 'true' : 'false'}
               />
             ))}
           </div>

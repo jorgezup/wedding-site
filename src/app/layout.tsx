@@ -59,6 +59,50 @@ export default function RootLayout({
       <body
         className={`${playfairDisplay.variable} ${montserrat.variable} font-sans antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Event",
+              "name": "Casamento Eiva & Jorge",
+              "description": "Celebre conosco nosso casamento em 14 de Fevereiro de 2026",
+              "startDate": "2026-02-14T19:00:00-03:00",
+              "endDate": "2026-02-15T02:00:00-03:00",
+              "eventStatus": "https://schema.org/EventScheduled",
+              "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+              "location": {
+                "@type": "Place",
+                "name": "Local da Cerimônia e Festa",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Adamantina",
+                  "addressRegion": "SP",
+                  "addressCountry": "BR"
+                }
+              },
+              "organizer": [
+                {
+                  "@type": "Person",
+                  "name": "Eiva"
+                },
+                {
+                  "@type": "Person", 
+                  "name": "Jorge"
+                }
+              ],
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "BRL",
+                "availability": "https://schema.org/InStock",
+                "url": "https://eivaejorge.vercel.app"
+              },
+              "image": "https://eivaejorge.vercel.app/og",
+              "url": "https://eivaejorge.vercel.app"
+            })
+          }}
+        />
         {children}
       </body>
     </html>
