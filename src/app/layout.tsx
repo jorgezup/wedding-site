@@ -16,6 +16,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
   title: "Eiva & Jorge - Casamento",
   description: "Celebre conosco nosso casamento em 14 de Fevereiro de 2026. Encontre todas as informações sobre a cerimônia, festa e lista de presentes.",
   keywords: ["casamento", "Eiva", "Jorge", "14 de fevereiro", "2026", "cerimônia", "festa"],
@@ -26,6 +27,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "Casamento Eiva & Jorge",
+    images: [
+      {
+        url: "/og",
+        width: 1200,
+        height: 630,
+        alt: "Casamento Eiva & Jorge - 14 de Fevereiro de 2026",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
