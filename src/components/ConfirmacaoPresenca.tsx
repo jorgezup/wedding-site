@@ -165,7 +165,7 @@ const ConfirmacaoPresenca = () => {
           </h2>
           <p className="text-base sm:text-lg text-gray-600">
             Sua presença tornará nosso dia ainda mais especial! Por favor, confirme até{' '}
-            <span className="font-semibold text-primary">31 de Janeiro de 2026</span>
+            <span className="font-semibold text-primary">10 de Janeiro de 2026</span>
           </p>
         </div>
 
