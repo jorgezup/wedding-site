@@ -73,11 +73,10 @@ const Footer = () => {
             <div className="flex items-center text-gray-400 text-sm">
               <Code className="w-4 h-4 mr-2" />
               <span>
-                Desenvolvido com{' '}
-                <Heart className="w-4 h-4 inline text-rose-400 mx-1" />
+                Desenvolvido
                 por{' '}
                 <a 
-                  href="https://github.com/jorgezupirolli" 
+                  href="https://github.com/jorgezup" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
@@ -89,7 +88,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className="text-gray-400 text-sm text-center sm:text-right">
-              <p>© {currentYear} Eiva & Jorge. Feito para celebrar nosso amor.</p>
+              <p>© {currentYear} Eiva & Jorge.</p>
             </div>
           </div>
         </div>

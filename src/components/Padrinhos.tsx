@@ -4,9 +4,11 @@ import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Users, Heart } from 'lucide-react';
 
 const padrinhos = [
-  { name: 'Rafa', photo: '/padrinhos/Rafa.jpg', role: 'Padrinho' },
-  { name: 'Família do Noivo', photo: '/padrinhos/familia.jpg', role: 'Família' },
-  { name: 'Família da Noiva', photo: '/padrinhos/familia-2.jpg', role: 'Família' },
+  { name:'Padrinhos/Madrinhas Família', photo: '/padrinhos/familia.jpg', role: 'Padrinhos/Madrinhas' },
+  { name:'Padrinho Bruno', photo: '/padrinhos/padrinho-bruno.jpg', role: 'Padrinho' },
+  { name:'Padrinhos/Madrinhas Amigos Campo Grande', photo: '/padrinhos/amigos-cg.jpg', role: 'Padrinhos/Madrinhas' },
+  { name: 'Padrinho Rafa', photo: '/padrinhos/Rafa.jpg', role: 'Padrinho' },
+  // { name: 'Família da Noiva', photo: '/padrinhos/familia-2.jpg', role: 'Padrinhos/Madrinhas Família' },
 ];
 
 const Padrinhos = () => {
@@ -96,9 +98,9 @@ const Padrinhos = () => {
                 <Heart className="w-5 h-5 text-accent mr-2" />
                 <span className="text-sm text-gray-500 uppercase tracking-wider">{padrinhos[currentIndex].role}</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-serif font-bold text-gray-800">
+              {/* <h3 className="text-xl sm:text-2xl font-serif font-bold text-gray-800">
                 {padrinhos[currentIndex].name}
-              </h3>
+              </h3> */}
             </div>
           </div>
           

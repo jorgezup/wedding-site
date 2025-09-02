@@ -18,7 +18,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-montserrat)", "system-ui", "sans-serif"],
-        serif: ["var(--font-great-vibes)", "serif"],
+        serif: ["var(--font-playfair-display)", "serif"],
       },
     },
   },

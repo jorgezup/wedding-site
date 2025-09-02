@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { MapPin, Phone, Star, Lightbulb } from 'lucide-react';
+import { FaMapPin, FaPhone, FaStar, FaLightbulb, FaCar, FaInstagram } from 'react-icons/fa6';
 
 const hoteis = [
   {
@@ -54,9 +54,15 @@ const hoteis = [
 ];
 
 const saloes = [
-  { name: 'Salão Beleza & Arte', address: 'Centro', mapLink: '#', phone: '(67) 3333-7777', services: ['Cabelo', 'Maquiagem', 'Unhas'] },
-  { name: 'Studio Glamour', address: 'Jardins', mapLink: '#', phone: '(67) 3333-8888', services: ['Penteados', 'Make', 'Sobrancelha'] },
-  { name: 'Espaço Elegante', address: 'Vila Olinda', mapLink: '#', phone: '(67) 3333-9999', services: ['Cabelo', 'Estética', 'Relaxamento'] },
+  { name: 'Spa Belle Adamantina', address: 'Adamantina - SP', instagram: 'https://www.instagram.com/spabelleadamantina?igsh=YXE0aXFyM2Zpczhm', services: ['Spa', 'Tratamentos de Beleza', 'Estética'] },
+  { name: 'Studio Garden', address: 'Adamantina - SP', instagram: 'https://www.instagram.com/studiogardenn_?igsh=MXFhcndzemM1cjFwbw==', services: ['Cabelo', 'Maquiagem', 'Penteados'] },
+  { name: 'Essencialle Adamantina', address: 'Adamantina - SP', instagram: 'https://www.instagram.com/essencialleadt?igsh=N3pzdGpoeTZhbW5o', services: ['Beleza', 'Estética', 'Cuidados'] },
+];
+
+const vans = [
+  { name: 'Sandro', phone: '(18) 99709-3494' },
+  { name: 'Vitória Van', phone: '(18) 99620-6729' },
+  { name: 'GM  Viagens', phone: '(18) 99793-8501' },
 ];
 
 const Dicas = () => {
@@ -65,7 +71,7 @@ const Dicas = () => {
     <section id="dicas" className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-indigo-50 to-cyan-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12">
-          <Lightbulb className="w-8 h-8 sm:w-12 sm:h-12 text-indigo-500 mx-auto mb-4" />
+          <FaLightbulb className="w-8 h-8 sm:w-12 sm:h-12 text-indigo-500 mx-auto mb-4" />
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-gray-800 mb-4">
             Dicas Especiais
           </h2>
@@ -78,7 +84,7 @@ const Dicas = () => {
           {/* Hotéis */}
           <div>
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-center mb-8 text-gray-800 flex items-center justify-center gap-2">
-              <MapPin className="w-6 h-6 text-blue-500" />
+              <FaMapPin className="w-6 h-6 text-blue-500" />
               Sugestões de Hotéis
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -88,15 +94,15 @@ const Dicas = () => {
                     <h4 className="font-serif font-bold text-lg mb-2">{hotel.name}</h4>
                     <div className="space-y-2 text-sm text-gray-600 mb-3">
                       <div className="flex items-start">
-                        <MapPin className="w-4 h-4 mr-2 text-blue-500 mt-0.5 flex-shrink-0" />
+                        <FaMapPin className="w-4 h-4 mr-2 text-blue-500 mt-0.5 flex-shrink-0" />
                         <span className="break-words">{hotel.address}</span>
                       </div>
                       <div className="flex items-center">
-                        <Phone className="w-4 h-4 mr-2 text-green-500" />
+                        <FaPhone className="w-4 h-4 mr-2 text-green-500" />
                         <span>{hotel.phone}</span>
                       </div>
                       <div className="flex items-center">
-                        <Star className="w-4 h-4 mr-2 text-yellow-500 fill-current" />
+                        <FaStar className="w-4 h-4 mr-2 text-yellow-500 fill-current" />
                         <span>{hotel.rating} estrelas</span>
                       </div>
                     </div>
@@ -118,7 +124,7 @@ const Dicas = () => {
                       rel="noopener noreferrer"
                       className="mt-4 inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
                     >
-                      <MapPin className="w-4 h-4 mr-1" />
+                      <FaMapPin className="w-4 h-4 mr-1" />
                       Ver no mapa
                     </a>
                   </div>
@@ -131,7 +137,7 @@ const Dicas = () => {
           {/* Salões */}
           <div>
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-center mb-8 text-gray-800 flex items-center justify-center gap-2">
-              <Star className="w-6 h-6 text-pink-500" />
+              <FaStar className="w-6 h-6 text-pink-500" />
               Salões de Beleza
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -141,12 +147,19 @@ const Dicas = () => {
                     <h4 className="font-serif font-bold text-lg mb-2">{salao.name}</h4>
                     <div className="space-y-2 text-sm text-gray-600 mb-3">
                       <div className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-2 text-pink-500" />
+                        <FaMapPin className="w-4 h-4 mr-2 text-pink-500" />
                         <span>{salao.address}</span>
                       </div>
                       <div className="flex items-center">
-                        <Phone className="w-4 h-4 mr-2 text-green-500" />
-                        <span>{salao.phone}</span>
+                        <FaInstagram className="w-4 h-4 mr-2 text-pink-500" />
+                        <a 
+                          href={salao.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-pink-600 hover:text-pink-800 transition-colors"
+                        >
+                          Instagram
+                        </a>
                       </div>
                     </div>
                     <div className="mb-4">
@@ -159,15 +172,30 @@ const Dicas = () => {
                         ))}
                       </div>
                     </div>
-                    <a
-                      href={salao.mapLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-pink-600 hover:text-pink-800 font-medium text-sm transition-colors"
-                    >
-                      <MapPin className="w-4 h-4 mr-1" />
-                      Ver no mapa
-                    </a>
+                  </div>
+                </div>
+              ))
+              }
+            </div>
+          </div>
+
+          {/* Translado */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-center mb-8 text-gray-800 flex items-center justify-center gap-2">
+              <FaCar className="w-6 h-6 text-green-500" />
+              Translado Adamantina ↔ Osvaldo Cruz
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {vans.map((van, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                  <div className="p-4 sm:p-6">
+                    <h4 className="font-serif font-bold text-lg mb-2">{van.name}</h4>
+                    <div className="space-y-2 text-sm text-gray-600 mb-3">
+                      <div className="flex items-center">
+                        <FaPhone className="w-4 h-4 mr-2 text-green-500" />
+                        <span>{van.phone}</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Countdown from './Countdown';
 
-const images = ['/home/175501.jpg', '/home/176323.jpg'];
+const images = ['/home/praia.jpg', '/home/amanhecer.jpg'];
 
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
